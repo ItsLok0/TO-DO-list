@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do Accessible</title>
-</head>
-<body>
-  <main>
-    <h1>Liste de tâches</h1>
-    <p>Bienvenue dans votre application accessible !</p>
-  </main>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<form action="/add" method="POST" aria-label="Ajouter une tâche">
+  <label for="title">Nom de la tâche</label>
+  <input type="text" id="title" name="title" required>
+  <button type="submit">Ajouter</button>
+</form>
+
+<ul>
+  {% for task in tasks %}
+    <li>
+      <span {% if task.done %}aria-label="Tâche terminée"{% endif %}>{{ task.title }}</span>
+      <a href="/delete/{{ task.id }}" aria-label="Supprimer {{ task.title }}">❌</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
