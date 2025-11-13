@@ -1,0 +1,25 @@
+@use 'variables';
+
+body {
+  font-family: variables.$font-family;
+  font-size: variables.$base-font-size;
+  line-height: 1.5;
+  min-height: 100vh;
+  background-image: url("../img/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: variables.$text-color;
+  margin: 0;
+  padding: 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: variables.$heading-line-height;
+    margin: 0 0 1rem 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: variables.$primary-color;
+  }
+}
