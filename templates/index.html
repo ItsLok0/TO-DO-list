@@ -2,18 +2,22 @@
 {% block title %}Accueil{% endblock %}
 
 {% block content %}
-<form action="/add" method="POST" aria-label="Ajouter une tâche">
-  <label for="title">Nom de la tâche</label>
-  <input type="text" id="title" name="title" required>
-  <button type="submit">Ajouter</button>
-</form>
+<section id="todo-list">
+  <div class="content">
+    <form action="/add" method="POST" aria-label="Ajouter une tâche">
+      <label for="title">Nom de la tâche</label>
+      <input type="text" id="title" name="title" required>
+      <button type="submit">Ajouter</button>
+    </form>
 
-<ul>
-  {% for task in tasks %}
-    <li>
-      <span {% if task.done %}aria-label="Tâche terminée"{% endif %}>{{ task.title }}</span>
-      <a href="/delete/{{ task.id }}" aria-label="Supprimer {{ task.title }}">❌</a>
-    </li>
-  {% endfor %}
-</ul>
+    <ul>
+      {% for task in tasks %}
+        <li>
+          <span {% if task.done %}aria-label="Tâche terminée"{% endif %}>{{ task.title }}</span>
+          <a href="/delete/{{ task.id }}" aria-label="Supprimer {{ task.title }}">❌</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
 {% endblock %}

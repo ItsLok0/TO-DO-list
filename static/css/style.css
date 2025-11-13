@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   min-height: 100vh;
+  display: flex;
   background-image: url("../img/background-image.jpg");
   background-size: cover;
   background-position: center;
@@ -20,23 +21,20 @@ body a {
   color: #007BFF;
 }
 
-header {
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
 main {
   max-width: 600px;
   margin: 2rem auto;
   padding: 0 1rem;
+  display: flex;
 }
-
-footer {
-  text-align: center;
+main #todo-list {
+  flex: 1;
+}
+main #todo-list .content {
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
-  font-size: 0.9rem;
-  color: #555555;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {

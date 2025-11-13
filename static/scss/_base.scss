@@ -5,6 +5,7 @@ body {
   font-size: variables.$base-font-size;
   line-height: 1.5;
   min-height: 100vh;
+  display: flex;
   background-image: url("../img/background-image.jpg");
   background-size: cover;
   background-position: center;
