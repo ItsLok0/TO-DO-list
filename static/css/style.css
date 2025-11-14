@@ -3,6 +3,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../img/background-image.jpg");
   background-size: cover;
   background-position: center;
@@ -11,32 +14,114 @@ body {
   margin: 0;
   padding: 0;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1 {
   line-height: 1.5;
   margin: 0 0 1rem 0;
 }
 body a {
   text-decoration: none;
-  color: #007BFF;
+  color: #0044ff;
 }
-
-header {
-  color: white;
-  padding: 1rem;
-  text-align: center;
+body .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 main {
   max-width: 600px;
   margin: 2rem auto;
   padding: 0 1rem;
+  display: flex;
 }
-
-footer {
-  text-align: center;
+main #todo-list {
+  flex: 1;
+}
+main #todo-list .content {
+  background-color: #fafafa;
+  opacity: 0.9;
   padding: 1rem;
-  font-size: 0.9rem;
-  color: #555555;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 3px 3px 20px white, -3px -3px 20px white;
+}
+main #todo-list .content form {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+main #todo-list .content form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+main #todo-list .content form input[type=text] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+main #todo-list .content form button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0044ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main #todo-list .content form button:hover, main #todo-list .content form button:focus {
+  background-color: rgb(0, 54.4, 204);
+}
+main #todo-list .content .group {
+  width: 100%;
+}
+main #todo-list .content .group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+main #todo-list .content .group ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid gray;
+}
+main #todo-list .content .group ul li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+main #todo-list .content .group ul li div::before {
+  position: relative;
+  top: 1px;
+  left: -4px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' style='forced-color-adjust: auto;'%3E%3Crect x='2' y='2' height='13' width='13' rx='2' stroke='currentcolor' stroke-width='1' fill-opacity='0' /%3E%3C/svg%3E");
+}
+main #todo-list .content .group ul li div[aria-checked=true]::before {
+  position: relative;
+  top: 1px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' style='forced-color-adjust: auto;'%3E%3Crect x='2' y='2' height='13' width='13' rx='2' stroke='currentcolor' stroke-width='1' fill-opacity='0' /%3E%3Cpolyline points='4,8 7,12 12,5' fill='none' stroke='currentcolor' stroke-width='2' /%3E%3C/svg%3E");
+}
+main #todo-list .content .group ul li div span {
+  flex: 1;
+  color: #222222;
+}
+main #todo-list .content .group ul li div a {
+  font-size: 1.2rem;
+}
+main #todo-list .content .group ul li:last-child {
+  border-bottom: none;
 }
 
 @media (max-width: 768px) {

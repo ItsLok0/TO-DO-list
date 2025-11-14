@@ -32,6 +32,14 @@ def create_app():
             db.session.delete(task)
             db.session.commit()
         return redirect(url_for('index'))
+    
+    @app.route('/toggle/<int:id>')
+    def toggle(id):
+        task = Task.query.get(id)
+        if task:
+            task.done = not task.done
+            db.session.commit()
+        return redirect(url_for('index'))
 
     return app
 
