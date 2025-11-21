@@ -78,7 +78,7 @@ main #todo-list .content form button {
   cursor: pointer;
 }
 main #todo-list .content form button:hover, main #todo-list .content form button:focus {
-  background-color: rgb(0, 54.4, 204);
+  filter: brightness(80%);
 }
 main #todo-list .content .group {
   width: 100%;
@@ -112,6 +112,10 @@ main #todo-list .content .group ul li div[aria-checked=true]::before {
   position: relative;
   top: 1px;
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' style='forced-color-adjust: auto;'%3E%3Crect x='2' y='2' height='13' width='13' rx='2' stroke='currentcolor' stroke-width='1' fill-opacity='0' /%3E%3Cpolyline points='4,8 7,12 12,5' fill='none' stroke='currentcolor' stroke-width='2' /%3E%3C/svg%3E");
+}
+main #todo-list .content .group ul li div[aria-checked=true] span {
+  text-decoration: line-through;
+  color: #555555;
 }
 main #todo-list .content .group ul li div span {
   flex: 1;
