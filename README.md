@@ -1,16 +1,37 @@
-1. Mise en place de l'environnement
+# 📝 Task Master — To-Do List App
 
-- Installer python
-- Se rendre à la racine du projet : 
-    1. Utiliser la commande : python -m venv venv
-    2. Activer le venv : venv\Scripts\activate.bat
-    3. Installer flask : pip install flask flask_sqlalchemy
+Une application web moderne et responsive de gestion de tâches quotidiennes, développée en JavaScript Vanilla et stylisée avec Tailwind CSS.
 
-2. Lancer le projet
+---
 
-- Utiliser la commande : python app.py (à la racine du projet)
+## 🚀 Fonctionnalités
 
+* **Gestion des tâches** : Ajout, modification, validation et suppression de tâches.
+* **Persistance des données** : Sauvegarde automatique du statut des tâches via le `localStorage`.
+* **Interface dynamique** : Filtrage des tâches (Toutes / En cours / Terminées).
+* **Design Responsive** : Interface épurée et adaptée aux mobiles comme aux écrans desktop.
 
--- Information --
+---
 
-Ce projet est une to-do list simple dans le but de comprendre les bases du développement avec Python et Flask
+## 🛠️ Stack Technique
+
+* **Front-end** : HTML5, JavaScript (ES6+)
+* **Styling** : Tailwind CSS
+* **Gestion du DOM & État** : Vanilla JS, Web Storage API (`localStorage`)
+
+---
+
+## 💻 Installation et utilisation locale
+
+1. **Cloner le projet**
+   ```bash
+   git clone [https://github.com/ItsLok0/TO-DO-list.git](https://github.com/ItsLok0/TO-DO-list.git)
+
+2. **Ouvrir le projet**
+Ouvrir simplement le fichier index.html dans le navigateur, ou utiliser l'extension Live Server sur VS Code.
+
+## Auteur
+
+Pierre Parent
+* **Portfolio** : [portfolio-pp-gamma.vercel.app](https://portfolio-pp-gamma.vercel.app)
+* **LinkedIn** : Pierre Parent
