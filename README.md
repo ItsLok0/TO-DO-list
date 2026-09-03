@@ -34,4 +34,4 @@ Ouvrir simplement le fichier index.html dans le navigateur, ou utiliser l'extens
 
 Pierre Parent
 * **Portfolio** : [portfolio-pp-gamma.vercel.app](https://portfolio-pp-gamma.vercel.app)
-* **LinkedIn** : Pierre Parent
+* **LinkedIn** : [Pierre Parent](https://www.linkedin.com/in/pierre-parent-dev/) 
